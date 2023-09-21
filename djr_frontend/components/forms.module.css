@@ -1,0 +1,21 @@
+.container{
+    width : 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+    margin : 10px auto;
+    padding: 30px;
+    gap : 20px;
+}
+.input{
+    border : 1px solid #ccc;
+    padding : 8px;
+    border-radius: 10px;
+}
+.input:focus{
+    outline: none;
+    border: 1px solid blue;
+}
+
+

@@ -11,8 +11,7 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL)
 class_mapping = model.config.id2label
 
-def pred(text: string):
-    text = "It is great to see athletes promoting awareness for climate change."
+def pred(text: str):
     tokens = tokenizer(text, return_tensors='pt')
     output = model(**tokens)
 

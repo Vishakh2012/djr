@@ -12,15 +12,15 @@ export const Forms = () => {
         const title = titleRef.current.value;
         const text = textRef.current.value;
         console.log(title, text);
-        const respose = await fetch("localhost:8000/getdata/", {
-            method : 'POST',
-            body : JSON.stringify({title : title, text : text}),
-            headers : {
-                'Content-Type' : "application/json"
-            }
-        })
-        const data = await respose.json();
-        console.log(data);
+        const respose = await fetch("http://127.0.0.1:8000/getdata/", {
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify({ title: title, text: text }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        console.log(respose);
     }
     
   return (

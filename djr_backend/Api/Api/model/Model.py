@@ -34,5 +34,5 @@ def pred(text: str):
     l = []
     for i in range(len(predictions)):
         if predictions[i]:
-            list.append(class_mapping[i])
+            l.append(class_mapping[i])
     return l

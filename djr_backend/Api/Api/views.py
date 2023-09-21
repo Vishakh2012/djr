@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import FormData
 from .serializer import textSerializer
+from .model.Model import pred
 
 @api_view(['GET','POST'])
 def get_data(request):
@@ -14,8 +15,8 @@ def get_data(request):
         return Response(data=serializer.data,status=status.HTTP_204_NO_CONTENT)
     elif(request.method == 'POST'):
         data = request.data
-        title = data['title']
         text = data['text']
-        print(title, text)
-        return Response(data=data,status=status.HTTP_201_CREATED)
+        print(text)
+        l = pred(text)
+        return Response({"result" : l},status=status.HTTP_201_CREATED)
 

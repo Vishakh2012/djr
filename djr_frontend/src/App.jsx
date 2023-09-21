@@ -6,17 +6,11 @@ import { Button } from 'react-daisyui'
 
 function App() {
   return (
-    <div className=' bg-white' >
+    <div className=" bg-white">
       <Navbar />
       <Forms />
     </div>
-function App() {
-  return (
-    <>
-      hello world
-    </>
-
-  )
+  );
 }
 
 export default App

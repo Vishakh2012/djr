@@ -1,3 +1,4 @@
+
 import { Forms } from '../components/Forms'
 import { Navbar } from '../components/Navbar'
 import './App.css'
@@ -9,6 +10,12 @@ function App() {
       <Navbar />
       <Forms />
     </div>
+function App() {
+  return (
+    <>
+      hello world
+    </>
+
   )
 }
 
